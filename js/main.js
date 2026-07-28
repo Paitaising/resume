@@ -22,9 +22,26 @@
         console.warn('当前浏览器可能不支持所有功能，建议使用现代浏览器');
     }
 
-document.addEventListener('DOMContentLoaded', function() {
+    // ==================== 工具函数（外层作用域） ====================
 
-    // ==================== 工具函数 ====================
+    // 安全的DOM查询（供所有事件处理器使用）
+    function safeQuerySelector(selector) {
+        try {
+            return document.querySelector(selector);
+        } catch (e) {
+            console.warn('Selector error:', selector, e);
+            return null;
+        }
+    }
+
+    function safeQuerySelectorAll(selector) {
+        try {
+            return document.querySelectorAll(selector);
+        } catch (e) {
+            console.warn('Selector error:', selector, e);
+            return [];
+        }
+    }
 
     // 节流函数
     function throttle(func, limit) {
@@ -53,25 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 func.apply(context, args);
             }, wait);
         };
-    }
-
-    // 安全的DOM查询
-    function safeQuerySelector(selector) {
-        try {
-            return document.querySelector(selector);
-        } catch (e) {
-            console.warn('Selector error:', selector, e);
-            return null;
-        }
-    }
-
-    function safeQuerySelectorAll(selector) {
-        try {
-            return document.querySelectorAll(selector);
-        } catch (e) {
-            console.warn('Selector error:', selector, e);
-            return [];
-        }
     }
 
     // ==================== 导航菜单功能 ====================
@@ -371,9 +369,8 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('%c张笑源 - 个人介绍网站', 'color: #2563EB; font-size: 20px; font-weight: bold;');
     console.log('%c技术栈: HTML5 + CSS3 + JavaScript', 'color: #64748B; font-size: 12px;');
     console.log('%c交互效果已加载 ✓', 'color: #10B981; font-size: 12px;');
-});
 
-// ==================== 页面完全加载后 ====================
+    // ==================== 页面完全加载后 ====================
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
