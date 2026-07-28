@@ -63,9 +63,18 @@
 - 使用有意义的变量名
 - 保持代码整洁
 
-## 部署说明
+## 部署
 
-项目将部署到GitHub Pages，具体步骤见 `docs/04-开发步骤文档.md` 的第六阶段。
+🔗 **在线访问**：[https://paitaising.github.io/resume/](https://paitaising.github.io/resume/)
+
+- **平台**：GitHub Pages
+- **仓库**：[github.com/Paitaising/resume](https://github.com/Paitaising/resume)
+- **分支**：main
+
+如需修改后更新网站，运行：
+```bash
+git add -A && git commit -m "描述你的修改" && git push
+```
 
 ## 注意事项
 
@@ -76,29 +85,11 @@
 
 ## 当前进度
 
-**阶段**：第五阶段 - 测试优化 ✅ 已完成
+**所有阶段已完成 ✅** 🎉
 
-**已完成**：
-- [x] 创建index.html主页面
-- [x] 创建css/style.css样式文件
-- [x] 创建js/main.js交互脚本
-- [x] 实现页面基本布局
-- [x] 添加导航菜单（支持移动端）
-- [x] 实现各板块内容展示
-- [x] 优化色彩搭配（渐变、阴影）
-- [x] 调整字体和间距
-- [x] 增强卡片样式
-- [x] 添加图标装饰
-- [x] 优化排版布局
-- [x] 增强JavaScript交互（Intersection Observer、节流防抖）
-- [x] 添加高级动画效果（卡片倾斜、数字计数）
-- [x] 优化用户体验（键盘快捷键、滚动进度条）
-- [x] 完善细节（无障碍支持、暗色模式预留）
-- [x] 增强HTML Meta标签（theme-color、Apple Web App、Open Graph）
-- [x] 优化响应式CSS（触摸设备、横屏、高分辨率、大屏幕）
-- [x] 创建响应式测试工具（responsive-test.js）
-- [x] 编写测试文档（RESPONSIVE-TEST.md、TEST-CHECKLIST.md）
-- [x] 性能优化（资源预加载、异步脚本、SVG Favicon）
-- [x] 代码优化（IIFE封装、严格模式、错误处理、兼容性检查）
-
-**下一步**：第六阶段 - 部署上线
+**第一阶段 - 基础搭建** ✅
+**第二阶段 - 样式美化** ✅
+**第三阶段 - 交互效果** ✅
+**第四阶段 - 响应式适配** ✅
+**第五阶段 - 测试优化** ✅
+**第六阶段 - 部署上线** ✅
