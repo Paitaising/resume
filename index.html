@@ -21,12 +21,10 @@
     <!-- 预加载关键CSS -->
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
-    <!-- 降级方案：JS 被禁用时确保内容可见 -->
+    <!-- 降级方案：JS 被禁用时确保动画元素可见 -->
     <noscript>
         <style>
-            body::before { display: none !important; }
-            body { overflow: auto !important; }
-            .hero-content, .animate-on-scroll, .stat-item { opacity: 1 !important; transform: none !important; }
+            .animate-on-scroll { opacity: 1 !important; transform: none !important; }
         </style>
     </noscript>
     <title>张笑源 - 后端开发工程师</title>
@@ -360,12 +358,10 @@
 
     <!-- 关键脚本 - 异步加载 -->
     <script src="js/main.js" defer></script>
-    <!-- 降级方案：3秒超时后强制显示内容 -->
+    <!-- 降级方案：3秒超时后标记页面已加载 -->
     <script>
         setTimeout(function() {
             document.body.classList.add('loaded');
-            var hero = document.querySelector('.hero-content');
-            if (hero) hero.classList.add('animate-visible');
         }, 3000);
     </script>
 </body>

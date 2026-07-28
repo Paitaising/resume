@@ -374,13 +374,6 @@
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-
-    setTimeout(function() {
-        var heroContent = safeQuerySelector('.hero-content');
-        if (heroContent) {
-            heroContent.classList.add('animate-visible');
-        }
-    }, 300);
 });
 
 })();
