@@ -18,3 +18,13 @@ desktop.ini
 # 系统文件
 $RECYCLE.BIN/
 System Volume Information/
+
+# 项目文档和笔记（仅本地保留，不上传GitHub）
+CLAUDE.md
+README.md
+RESPONSIVE-TEST.md
+TEST-CHECKLIST.md
+docs/
+开发日志/
+张笑源.md
+js/responsive-test.js
